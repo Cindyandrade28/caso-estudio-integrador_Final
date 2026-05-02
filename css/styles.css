@@ -1,0 +1,114 @@
+/* ===== TIPOGRAFÍA ===== */
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  padding-top: 70px; /* evita que el navbar tape contenido */
+}
+
+/* Títulos estilo tech */
+h1, h2, h3, h4, h5,
+.navbar-brand {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 600;
+}
+
+/* Scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== HERO ===== */
+.hero {
+  height: 60vh;
+  min-height: 400px;
+  background: url('../img/banner.jpg') center/cover no-repeat;
+  position: relative;
+}
+
+/* Overlay (puedes ajustar color aquí) */
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+
+/* Texto sobre el overlay */
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* ===== TARJETAS ===== */
+.card {
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* ===== NAVBAR BASE ===== */
+.nav {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.nav-link {
+  white-space: nowrap;
+}
+
+/* ===== NAVBAR ANIMADO ===== */
+.nav-link {
+  position: relative;
+  color: white;
+  transition: color 0.3s;
+}
+
+/* Línea animada */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #0d6efd;
+  transition: width 0.3s;
+}
+
+/* Hover */
+.nav-link:hover {
+  color: #0d6efd;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Activo */
+.nav-link.active {
+  color: #0d6efd;
+}
+
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* ===== LOGO ===== */
+.navbar-brand img {
+  height: 55px;
+  object-fit: contain;
+}
+.cliente-logo {
+  max-height: 80px;
+  object-fit: contain;
+  opacity: 0.85;
+  transition: all 0.3s ease;
+}
+
+.cliente-logo:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
